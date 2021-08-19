@@ -1,0 +1,926 @@
+@keyframes preLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --golden: #f4b536;
+  --grayBlack: #505050;
+}
+/* PreLoader Start */
+div.bgScreen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grayBlack);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+div.loader {
+  height: 70px;
+  width: 70px;
+  border: 10px solid var(--golden);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-radius: 100%;
+  animation: preLoader 2s linear infinite;
+  /* border-bottom: transparent; */
+  /* border-top: transparent; */
+}
+/* PreLoader Finish */
+/* BottomToTopButton */
+div.topBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  background-color: var(--golden);
+  padding: 12px;
+  transition: all 1s;
+  border-radius: 5px;
+  display: none;
+}
+div.topBtn a {
+  color: #fff;
+}
+div.animateTopBtn {
+  display: flex;
+}
+/* NavBar starts  */
+div.head {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  line-height: 80px;
+  z-index: 2;
+}
+ul.navBar {
+  display: flex;
+}
+ul.navBar li {
+  list-style-type: none;
+  text-transform: capitalize;
+  margin: auto 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+ul.navBar li:hover {
+  color: var(--golden);
+  cursor: pointer;
+}
+button.start {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border: 3px solid var(--golden);
+  border-radius: 5px;
+  color: #fff;
+  transition: all 500ms;
+}
+div.logo {
+  color: var(--golden);
+  font-weight: bold;
+  font-size: 2rem;
+}
+button.start:hover {
+  background-color: var(--golden);
+  color: var(--grayBlack);
+  cursor: pointer;
+}
+/* Oncondiiton Changinng nav color */
+.navReal {
+  background-color: rgba(72, 72, 72, 0.8);
+}
+div.navBarRespButton .fas {
+  display: none;
+}
+/* NavBar Finish  */
+div.headSec {
+  position: relative;
+  background-image: linear-gradient(
+      to top,
+      rgba(22, 22, 22, 0.52),
+      rgba(34, 34, 34, 0.73)
+    ),
+    url(./Images/hero-bg.jpg);
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  width: 100vw;
+  height: 100vh;
+}
+div.headCards {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  text-align: center;
+}
+div.text h2 {
+  font-size: 4rem;
+  width: 600px;
+  text-align: center;
+  color: #fff;
+  line-height: 70px;
+}
+div.text {
+  margin-top: 120px;
+}
+div.text p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+div.headCard {
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: solid 1px #fff;
+  border-radius: 2px;
+  margin-top: 10px;
+  color: var(--golden);
+  margin: auto 15px;
+}
+div.headCard:hover {
+  border: solid 1px var(--golden);
+}
+div.headCard p {
+  font-weight: bold;
+  color: #fff;
+}
+/* headSection Start */
+/* Span with Text Start  */
+div.spans {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 50px;
+  color: var(--grayBlack);
+}
+div.spans span {
+  width: 45vw;
+  height: 350px;
+}
+span.sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+span.sec1 h3 {
+  font-size: 2rem;
+  color: var(--grayBlack);
+}
+span.sec2 {
+  overflow: hidden;
+  border-radius: 2px;
+}
+span.sec2 img {
+  width: 45vw;
+  height: 450px;
+}
+div.spans li {
+  list-style-type: none;
+}
+div.spans li::before {
+  color: var(--golden);
+  content: "✓";
+}
+/* Span with Text Finish  */
+/* swiper Of brand Start */
+
+.swiper-container {
+  width: 80vw;
+  height: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+.swiper-slide img {
+  width: 90px;
+  filter: grayscale(100%);
+}
+.swiper-slide img:hover {
+  filter: grayscale(0);
+}
+/* swiper Of brand  Finsih*/
+/* image with 4 text bars start   */
+div.spans2 {
+  display: flex;
+  justify-content: space-around;
+}
+span.sec2of2 {
+  width: 50vw;
+  overflow: hidden;
+  border-radius: 2px;
+  height: 350px;
+}
+span.sec2of2 img {
+  width: 50vw;
+}
+div.secText {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 40vw;
+}
+span.icon i {
+  margin: 10px;
+  color: var(--golden);
+}
+span.content h4 {
+  font-size: 1.3rem;
+  color: var(--golden);
+  line-height: 40px;
+}
+span.content p {
+  color: var(--grayBlack);
+}
+span.sec1of2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+/* image with 4 text bars Finish   */
+div.services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: auto;
+  width: 100vw;
+}
+div.services h2 {
+  margin: 50px 30px 30px 30px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 1000;
+}
+div.serviceCards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+div.cardCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 350px;
+  text-align: center;
+  height: 150px;
+}
+div.serviceCard {
+  box-shadow: #a9a9a9 2px 2px 15px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #ebebeb;
+  padding: 80px 20px;
+  height: 200px;
+  margin: 10px;
+  transition: all 0.5s;
+}
+div.cardCon p {
+  color: var(--grayBlack);
+  line-height: 30px;
+}
+div.cardCon h4 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--golden);
+}
+div.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: #ebebeb 2px 2px 5px 1px;
+  border: none;
+}
+div.cardCon i {
+  color: var(--golden);
+}
+
+/* Check our Services Start */
+/* call to action start */
+div.callToAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./Images/cta-bg.jpg) fixed center center;
+  background-size: cover;
+  width: 90vw;
+  height: 200px;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+}
+div.callToAction p {
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+div.callToAction h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+div.callToAction button {
+  background-color: transparent;
+  border: #fff 2px solid;
+  border-radius: 4px;
+  height: 50px;
+  width: 200px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 20px;
+  transition: all 1s;
+}
+div.callToAction button:hover {
+  background-color: var(--golden);
+  border: none;
+  color: var(--grayBlack);
+  cursor: pointer;
+}
+/* call to action Finish */
+/* our Feautre Start  */
+div.ourFeature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  overflow: hidden;
+  margin: 50px;
+  z-index: 1;
+}
+span.sec1of3 {
+  width: 40vw;
+  overflow: hidden;
+}
+span.sec1of3 img {
+  width: 40vw;
+}
+span.sec2of3 {
+  width: 50vw;
+  color: var(--grayBlack);
+  /* position: relative;
+  bottom: 1px; */
+}
+div.featureCards {
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+div.featureCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 250px;
+  height: 140px;
+  margin: 10px;
+}
+div.ourFeature {
+  display: flex;
+  justify-content: space-around;
+}
+div.featureCard i {
+  margin: 5px;
+  color: var(--golden);
+}
+div.facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 90px;
+}
+div.facts h3 {
+  font-size: 2rem;
+}
+div.facts p {
+  color: var(--grayBlack);
+}
+/* our Feautre Finish  */
+/* feedBack with Slider */
+
+div.swiper-container1 {
+  align-items: center !important;
+  background: url(./Images/testimonials-bg.jpg) fixed,
+    linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  height: 250px;
+  color: #fff;
+}
+div.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+div.dp {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid var(--grayBlack);
+}
+div.dp img {
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+}
+div.swiper-slide p {
+  width: 70vw;
+  text-align: center;
+}
+div.swiper-slide p.comment {
+  font-style: italic;
+  line-height: 30px;
+}
+div.swiper-slide p.destination {
+  font-size: 0.85rem;
+  margin: 5px;
+}
+div.swiper-slide p.name {
+  font-weight: bold;
+}
+
+/* feedBack with Finish */
+
+/* Our Team start  */
+div.memberCard {
+  box-shadow: #a9a9a9 2px 2px 20px 1px;
+}
+div.mediaAndPic {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+}
+img.member {
+  width: 300px;
+}
+div.memberImage {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-bottom: 0;
+}
+p.memberName {
+  font-size: 1.25rem;
+  line-height: 30px;
+}
+
+p.memberDestination {
+  font-size: 0.8rem;
+  color: var(--grayBlack);
+  letter-spacing: 3px;
+  line-height: 20px;
+}
+div.memberDetail {
+  padding: 5px;
+}
+div.team h2 {
+  margin-left: 20px;
+  font-size: 2rem;
+  line-height: 70px;
+}
+div.iconSocial {
+  background-color: var(--grayBlack);
+  width: 50px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #fff;
+}
+div.socialmedia {
+  height: 100%;
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  bottom: 50px;
+}
+div.teamMember {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Our Team Finish  */
+/*  Contact Us Start  */
+div.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+div.contact h2 {
+  margin-left: 50px;
+  font-size: 2rem;
+  line-height: 70px;
+}
+div.map {
+  margin: auto;
+  text-align: center;
+}
+div.map iframe {
+  height: 300px;
+  width: 90vw;
+}
+div.form {
+  padding: 50px;
+  display: flex;
+}
+div.detailCon {
+  display: flex;
+  margin: 30px 0;
+}
+div.detail p.heading {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 25px;
+}
+div.detail i {
+  background-color: var(--golden);
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+}
+div.formCon {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 70vw;
+  margin-top: 20px;
+}
+div.formCon input {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid var(--golden);
+  padding: 5px;
+  margin: 10px 0;
+}
+div.formCon input.btn {
+  align-self: center;
+  background-color: transparent;
+  width: 150px;
+  background-color: var(--golden);
+  /* color: var(--grayBlack); */
+}
+textarea {
+  border-radius: 5px;
+  height: 200px;
+  border: 1px solid var(--golden);
+  /* padding: 10px; */
+}
+input.name,
+input.email {
+  width: 47%;
+}
+div.nameAndEmail {
+  display: flex;
+  justify-content: space-between;
+}
+div.formCon input:focus,
+div.formCon textarea:focus {
+  outline: none;
+}
+/*  Contact Us Finish  */
+
+/* Media Query */
+@media screen and (max-width: 1024px) {
+  div.text h2 {
+    margin-top: 1000px;
+  }
+  div.headCards {
+    width: 90vw;
+  }
+  div.headSec div.text {
+    margin-top: 200px;
+  }
+  div.text h2 {
+    margin: 0;
+  }
+  div.headSec div.headCard {
+    margin-top: 60px;
+  }
+  ul.navBar li {
+    font-size: 1.25rem;
+  }
+  div.featureCard {
+    width: 180px;
+    height: 120px;
+    flex-wrap: nowrap;
+    margin: 10px;
+  }
+  div.featureCards {
+    text-align: center;
+  }
+  span.sec2of3 {
+    margin: 50px;
+  }
+  div.memberCard {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  div.navBarRespButton > :first-child {
+    display: initial;
+    float: right;
+    margin: 5px;
+    color: #fff;
+  }
+  div.navBarRespButton > :nth-child(2) {
+    float: right;
+    margin: 5px;
+    color: #fff;
+  }
+  ul.navBar {
+    display: block;
+    align-self: flex-start;
+    background-color: #fff;
+    width: 91vw;
+    height: 90vh;
+    position: fixed;
+    left: 40px;
+    top: 70px;
+    display: none;
+  }
+  ul.navBar li {
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    line-height: 20px;
+  }
+  ul.navBar li:hover {
+    background-color: var(--golden);
+    color: var(--grayBlack);
+  }
+  div.startBtn {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  div.head {
+    justify-content: space-between;
+  }
+  div.logo {
+    margin-left: 20px;
+  }
+  div.headSec {
+    background-size: cover;
+    height: auto;
+  }
+  div.headSec div.text {
+    margin-top: 120px;
+  }
+  div.text h2 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  div.text p {
+    font-size: 1.5rem;
+  }
+  div.head {
+    line-height: 60px;
+  }
+
+  div.headSec div.headCard {
+    margin-top: 0px;
+    width: 180px;
+    height: 120px;
+    margin: 5px;
+  }
+  div.serviceCard {
+    box-shadow: none;
+    width: 40vw;
+    height: 160px;
+    margin: 10px 0;
+  }
+  div.spans {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+  div.spans span.sec2 {
+    width: 90vw;
+    text-align: center;
+    margin: 0z;
+  }
+  span.sec2 img {
+    width: auto;
+  }
+  div.spans .sec1 {
+    height: 350px;
+    text-align: start;
+    width: 90vw;
+    margin: auto 0;
+  }
+  div.spans2 {
+    flex-direction: column;
+    width: 100vw;
+    gap: 0;
+  }
+  div.spans2 .sec2of2 {
+    text-align: center;
+    width: 98vw;
+  }
+  div.spans2 img {
+    width: 90vw;
+  }
+  div.secText {
+    width: auto;
+    margin: 10px 20px;
+    text-align: start;
+  }
+  div.ourFeature {
+    flex-direction: column;
+    height: auto;
+  }
+  span.sec1of3 {
+    height: 400px;
+    width: 95vw;
+  }
+  span.sec1of3,
+  span.sec1of3 img {
+    width: 95vw;
+  }
+  span.sec2of3 {
+    width: 85vw;
+  }
+  span.sec2of3 h4 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  span.sec2of3 p {
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  div.featureCard {
+    width: 48vw;
+    margin: 0;
+    text-align: left;
+  }
+  div.featureCards {
+    width: 100vw;
+  }
+  div.facts h3 {
+    line-height: 30px;
+  }
+  div.form {
+    flex-direction: column;
+  }
+  div.detailCon i {
+    margin-right: 20px;
+  }
+  div.formCon {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  div.text {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  div.text h2 {
+    font-size: 1.5rem;
+    width: auto;
+    line-height: 30px;
+  }
+  div.headCards div.headCard {
+    width: 80vw;
+  }
+  div.spans .sec1 {
+    height: auto;
+  }
+  div.serviceCards {
+    /* flex-direction: column; */
+  }
+  div.serviceCard {
+    width: 90vw;
+  }
+  div.callToAction {
+    width: auto;
+    padding: 30px 10px;
+  }
+  div.callToAction p {
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  span.sec2of3{
+    margin: auto;
+  }
+  div.featureCards{
+    display: block;
+    width: 100vw;
+  }
+  div.featureCard{
+    width: 100vw;
+  }
+  div.nameAndEmail{
+    flex-direction: column;
+  }
+   div.formCon textarea{
+    width: 350px;
+  }
+  div.formCon input{
+    width: 80vw;
+  }
+  div.contact{
+    margin-top:20px ;
+  }
+}
+@media screen and (max-width : 375px){
+  div.serviceCard{
+    width: 80vw;
+  }
+  div.headCards div.headCard{
+    width: 95vw;
+  }
+  div.callToAction{
+    height: 270px;
+  }
+  div.formCon textarea{
+    width: 310px;
+  }
+  input.btn{
+    position: relative;
+    right: 15px;
+  }
+}
+@media screen and (max-width : 320px) {
+ span.sec1 h3{
+   font-size: 1.5rem;
+ } 
+ ul.textWithTicks li{
+   margin: 10px auto;
+ }
+ span.sec2of2{
+   height: auto;
+ }
+ span.sec2of3 h4 {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+span.sec1of3 {
+  height: auto;
+}
+span.sec2of3 p {
+  letter-spacing: 0px;
+  line-height: auto;
+  font-size: 15px;
+}
+div.featureCard{
+  width: 70vw;
+}
+div.formCon textarea{
+  width: 265px;
+}
+div.topBtn a{
+  font-size: 12px;
+}
+}
