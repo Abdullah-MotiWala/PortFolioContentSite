@@ -486,6 +486,8 @@ div.swiper-slide p.name {
 /* Our Team start  */
 div.memberCard {
   box-shadow: #a9a9a9 2px 2px 20px 1px;
+  overflow: hidden;
+  position: relative;
 }
 div.mediaAndPic {
   display: flex;
@@ -522,21 +524,31 @@ div.team h2 {
   line-height: 70px;
 }
 div.iconSocial {
-  background-color: var(--grayBlack);
-  width: 50px;
+  background-color: #fff;
+  padding: 5px;
+  width: 30px;
+  font-size: 10px;
   z-index: 2;
   text-align: center;
   border-radius: 2px;
-  background-color: #fff;
+  transition: all 0.5s;
+}
+div.iconSocial:hover{
+  background-color: var(--grayBlack);
+  color:var(--golden);
 }
 div.socialmedia {
-  height: 100%;
   display: flex;
   width: 300px;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  bottom: 50px;
+  position: absolute;
+  bottom: -50px;
+  transition: all 0.7s;
+}
+div.memberCard:hover div.socialmedia{
+  bottom: 80px;
+  cursor: pointer;
 }
 div.teamMember {
   display: flex;
@@ -837,9 +849,6 @@ div.formCon textarea:focus {
   div.spans .sec1 {
     height: auto;
   }
-  div.serviceCards {
-    /* flex-direction: column; */
-  }
   div.serviceCard {
     width: 90vw;
   }
@@ -851,76 +860,76 @@ div.formCon textarea:focus {
     line-height: 20px;
     margin-bottom: 10px;
   }
-  span.sec2of3{
+  span.sec2of3 {
     margin: auto;
   }
-  div.featureCards{
+  div.featureCards {
     display: block;
     width: 100vw;
   }
-  div.featureCard{
+  div.featureCard {
     width: 100vw;
   }
-  div.nameAndEmail{
+  div.nameAndEmail {
     flex-direction: column;
   }
-   div.formCon textarea{
+  div.formCon textarea {
     width: 350px;
   }
-  div.formCon input{
+  div.formCon input {
     width: 80vw;
   }
-  div.contact{
-    margin-top:20px ;
+  div.contact {
+    margin-top: 20px;
   }
 }
-@media screen and (max-width : 375px){
-  div.serviceCard{
+@media screen and (max-width: 375px) {
+  div.serviceCard {
     width: 80vw;
   }
-  div.headCards div.headCard{
+  div.headCards div.headCard {
     width: 95vw;
   }
-  div.callToAction{
+  div.callToAction {
     height: 270px;
   }
-  div.formCon textarea{
+  div.formCon textarea {
     width: 310px;
   }
-  input.btn{
+  input.btn {
     position: relative;
     right: 15px;
   }
 }
-@media screen and (max-width : 320px) {
- span.sec1 h3{
-   font-size: 1.5rem;
- } 
- ul.textWithTicks li{
-   margin: 10px auto;
- }
- span.sec2of2{
-   height: auto;
- }
- span.sec2of3 h4 {
-  font-size: 1.5rem;
-  line-height: 30px;
-}
-span.sec1of3 {
-  height: auto;
-}
-span.sec2of3 p {
-  letter-spacing: 0px;
-  line-height: auto;
-  font-size: 15px;
-}
-div.featureCard{
-  width: 70vw;
-}
-div.formCon textarea{
-  width: 265px;
-}
-div.topBtn a{
-  font-size: 12px;
-}
+@media screen and (max-width: 320px) {
+  span.sec1 h3 {
+    font-size: 1.5rem;
+  }
+  ul.textWithTicks li {
+    margin: 10px auto;
+  }
+  span.sec2of2 {
+    height: auto;
+  }
+  span.sec2of3 h4 {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  span.sec1of3 {
+    height: auto;
+  }
+  span.sec2of3 p {
+    letter-spacing: 0px;
+    line-height: auto;
+    font-size: 15px;
+  }
+  div.featureCard {
+    width: 70vw;
+  }
+  div.formCon textarea {
+    width: 265px;
+  }
+  div.topBtn a {
+    font-size: 12px;
+  }
 }
