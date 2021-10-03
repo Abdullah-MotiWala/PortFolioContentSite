@@ -26,24 +26,25 @@
   </div>
   <!-- NavBar starts -->
   <div class="head" data-aos="zoom-in">
-    <div class="headComp logo">DEVS</div>
+    <div class="headComp logo">Pentone</div>
     <div class="headComp nav">
 
       <ul class="navBar">
-        <li class="navComp1">home</li>
-        <li class="navComp2">about</li>
-        <li class="navComp3">services</li>
-        <li class="navComp4">portfolio</li>
-        <li class="navComp5">team</li>
-        <li class="navComp6">drop down</li>
-        <li class="navComp7">contact</li>
+        <li class="navComp1"><a href=""> home</a></li>
+        <li class="navComp2"><a href="#about"> about</a></li>
+        <li class="navComp7"><a href="#support"> support</a></li>
+        <li class="navComp3"><a href="#servicesId"> services</a></li>
+        <li class="navComp5"><a href="#team"> team</a></li>
+        <li class="navComp7"><a href="#contact"> contact</a></li>
+
+
       </ul>
     </div>
     <div class="headComp startBtn">
       <button class="start">Get Start</button>
       <div class="navBarRespButton">
         <i class="fas fa-bars fa-2x" onclick="respNavBar()"></i>
-        <i class="fas fa-times fa-2x"></i>
+        <i class="fas fa-times fa-2x" onclick="respNavBar()"></i>
       </div>
     </div>
   </div>
@@ -81,7 +82,7 @@
   </div>
   <!-- heaSection Finish -->
   <!-- Span with Text Start -->
-  <div class="spans">
+  <div class="spans" id="about">
     <span class="sec1" data-aos="fade-right">
       <h3>
         Voluptatem dignissimos provident quasi corporis voluptates sit
@@ -147,11 +148,11 @@
   </div>
   <!-- swiper Of brand Finish -->
   <!-- image with 4 text bars start  -->
-  <div class="spans2" >
+  <div class="spans2">
     <span class="sec2of2" data-aos="fade-right">
       <img src="./Images/features.jpg" alt="man using laptop" />
     </span>
-    <span class="sec1of2"  data-aos="fade-left">
+    <span class="sec1of2" data-aos="fade-left">
       <div class="secText">
         <span class="icon"><i class="far fa-address-book fa-3x"></i></span>
         <span class="content">
@@ -196,7 +197,7 @@
   </div>
   <!-- image with 4 text bars Finsih  -->
   <!-- Check our Services Start  -->
-  <div class="services">
+  <div class="services" id="servicesId">
     <h2>check our services</h2>
     <div class="serviceCards" data-aos="zoom-in">
       <div class="serviceCard">
@@ -270,7 +271,7 @@
       esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
       id est laborum
-    </p >
+    </p>
     <button data-aos="zoom-in">Call to action</button>
   </div>
   <!-- call to action Finish -->
@@ -333,7 +334,7 @@
 
   <!-- feedBack with Slider Finish -->
   <!-- Our Team start -->
-  <div class="team">
+  <div class="team" id="team">
     <h2>Meet Our Team</h2>
     <div class="teamMember">
       <div class="memberCard">
@@ -406,7 +407,7 @@
 
   <!-- our Team Finsih -->
   <!-- Contact Us Start -->
-  <div class="contact">
+  <div class="contact" id="contact">
     <h2>Contact Us</h2>
     <div class="map"><iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.810274725495!2d67.05825124952199!3d24.872643023733577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e923adec49d%3A0xcc2dbd936f1c5627!2sTariq%20Rd%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1627500973552!5m2!1sen!2s"
@@ -447,6 +448,7 @@
         <input type="button" value="Send Message" class="btn">
       </div>
     </div>
+    <footer>Inspired by <a href="https://bootstrapmade.com/" target="_blank">Bootstrapmade</a></footer>
     <!-- Contact Us Finish -->
     <!-- swiper Library -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

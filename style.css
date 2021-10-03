@@ -81,14 +81,20 @@ div.head {
 ul.navBar {
   display: flex;
 }
-ul.navBar li {
-  list-style-type: none;
+ul.navBar a {
   text-transform: capitalize;
   margin: auto 10px;
   font-size: 0.9rem;
   color: #fff;
+  text-decoration: none;
 }
-ul.navBar li:hover {
+.active {
+  color: var(--golden);
+}
+ul li {
+  list-style-type: none;
+}
+ul.navBar a:hover {
   color: var(--golden);
   cursor: pointer;
 }
@@ -533,9 +539,9 @@ div.iconSocial {
   border-radius: 2px;
   transition: all 0.5s;
 }
-div.iconSocial:hover{
+div.iconSocial:hover {
   background-color: var(--grayBlack);
-  color:var(--golden);
+  color: var(--golden);
 }
 div.socialmedia {
   display: flex;
@@ -546,7 +552,7 @@ div.socialmedia {
   bottom: -50px;
   transition: all 0.7s;
 }
-div.memberCard:hover div.socialmedia{
+div.memberCard:hover div.socialmedia {
   bottom: 80px;
   cursor: pointer;
 }
@@ -641,7 +647,18 @@ div.formCon textarea:focus {
   outline: none;
 }
 /*  Contact Us Finish  */
-
+footer{
+  width: 100vw;
+  text-align: center;
+  color: var(--golden);
+  color: #ebebeb;
+  background-color: var(--grayBlack);
+  padding: 1rem;
+}
+footer a{
+  color: var(--golden);
+  
+}
 /* Media Query */
 @media screen and (max-width: 1024px) {
   div.text h2 {
@@ -701,13 +718,13 @@ div.formCon textarea:focus {
     top: 70px;
     display: none;
   }
-  ul.navBar li {
+  ul.navBar a {
     color: #000;
     font-size: 1rem;
     padding: 10px;
     line-height: 20px;
   }
-  ul.navBar li:hover {
+  ul.navBar a:hover {
     background-color: var(--golden);
     color: var(--grayBlack);
   }
